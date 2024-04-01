@@ -29,7 +29,7 @@ const ClientProfile = () => {
 	return (
 		<section
 			className="shadow"
-			style={{ backgroundColor: "whitesmoke" }}>
+			style={{ backgroundColor: "white smoke" }}>
 			<div className="container py-5">
 				<div className="row">
 					<div className="col-lg-3">
@@ -133,4 +133,4 @@ const ClientProfile = () => {
 	);
 };
 
-export default ClientPofile;
+export default ClientProfile;
