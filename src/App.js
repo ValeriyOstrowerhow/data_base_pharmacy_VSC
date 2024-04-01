@@ -9,9 +9,9 @@ import {
 	Routes,
 	Route,
 } from "react-router-dom";
-import AddClient from "./component/student/AddClient";
-import EditClient from "./component/student/EditClient";
-import ClientPofile from "./component/student/ClientProfile";
+import AddClient from "./component/client/AddClient";
+import EditClient from "./component/client/EditClient";
+import ClientProfile from "./component/client/ClientProfile";
 
 function App() {
 	return (
