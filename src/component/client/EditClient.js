@@ -10,12 +10,12 @@ import {
 	useParams,
 } from "react-router-dom";
 
-const EditStudent = () => {
+const EditClient = () => {
 	let navigate = useNavigate();
 
 	const { id } = useParams();
 
-	const [student, setStudent] = useState({
+	const [client, setClient] = useState({
 		firstName: "",
 		lastName: "",
 		email: "",

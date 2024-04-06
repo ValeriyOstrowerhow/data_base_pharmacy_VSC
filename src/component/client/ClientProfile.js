@@ -16,12 +16,12 @@ const ClientProfile = () => {
 	});
 
 	useEffect(() => {
-		loadStudent();
+		loadClient();
 	}, []);
 
 	const loadClient = async () => {
 		const result = await axios.get(
-			`http://localhost:9192/students/client/${id}`
+			`http://localhost:9192/clients/client/${id}`
 		);
 		setClient(result.data);
 	};

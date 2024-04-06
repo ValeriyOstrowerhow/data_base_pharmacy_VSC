@@ -1,3 +1,4 @@
+import { FaExampleIcon } from 'react-icons/fa'; 
 import React, {
 	useEffect,
 	useState,
@@ -11,7 +12,8 @@ import {
 import { Link } from "react-router-dom";
 import Search from "../common/Search";
 
-const ClientsView = () => {
+
+function ClientsView() {
 	const [clients, setClients] = useState([]);
 	const [search, setSearch] = useState("");
 
@@ -44,8 +46,7 @@ const ClientsView = () => {
 		<section>
 			<Search
 				search={search}
-				setSearch={setSearch}
-			/>
+				setSearch={setSearch} />
 			<table className="table table-bordered table-hover shadow">
 				<thead>
 					<tr className="text-center">
@@ -60,10 +61,9 @@ const ClientsView = () => {
 
 				<tbody className="text-center">
 					{clients
-						.filter((st) =>
-							st.firstName
-								.toLowerCase()
-								.includes(search)
+						.filter((st) => st.firstName
+							.toLowerCase()
+							.includes(search)
 						)
 						.map((client, index) => (
 							<tr key={client.id}>
@@ -91,9 +91,7 @@ const ClientsView = () => {
 								<td className="mx-2">
 									<button
 										className="btn btn-danger"
-										onClick={() =>
-											handleDelete(student.id)
-										}>
+										onClick={() => handleDelete(client.id)}>
 										<FaTrashAlt />
 									</button>
 								</td>
@@ -103,6 +101,6 @@ const ClientsView = () => {
 			</table>
 		</section>
 	);
-};
+}
 
 export default ClientsView;
