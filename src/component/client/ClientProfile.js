@@ -16,8 +16,7 @@ const ClientProfile = () => {
 	});
 
 	useEffect(() => {
-		loadClient();
-	}, []);
+	}, [loadClient]);
 
 	const loadClient = async () => {
 		const result = await axios.get(

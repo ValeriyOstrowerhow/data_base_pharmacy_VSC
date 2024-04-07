@@ -29,8 +29,7 @@ const EditClient = () => {
 	} = client;
 
 	useEffect(() => {
-		loadClient();
-	}, []);
+	}, [loadClient]);
 
 	const loadClient = async () => {
 		const result = await axios.get(

@@ -5,8 +5,8 @@ const NavBar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
 			<div className="container-fluid">
-				<Link className="navbar-brand" to={"/"}>
-					SBR Demo
+				<Link className="navbar-brand" to={"https://vita-apotheke-hh.de/"}>
+					Our Pharmacy
 				</Link>
 				<button
 					className="navbar-toggler"
@@ -36,6 +36,15 @@ const NavBar = () => {
 								to={"/add-clients"}>
 								Add new Clients
 							</Link>
+							</li>
+							<li className="nav-item">
+							<Link
+								className="nav-link"
+								to={"https://vita-apotheke-hh.de/"}>
+								EXIT
+									
+				</Link>
+														
 						</li>
 					</ul>
 				</div>
