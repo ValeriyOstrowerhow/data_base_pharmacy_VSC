@@ -20,13 +20,11 @@ import ClientProfile from "./component/client/ClientProfile";
 
 function App() {
 	return (
-	
 			<main className="container mt-5">
-		
-			<Router><Main />
 			
+			<Router>
+			<Main />
 			<NavBar />
-			
 				<Routes>
 					<Route 
 						exact

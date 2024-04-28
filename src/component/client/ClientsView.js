@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import Search from "../common/Search";
 
 
-function ClientsView() {
+async function ClientsView() {
 	const [clients, setClients] = useState([]);
 	const [search, setSearch] = useState("");
 
@@ -24,6 +24,7 @@ function ClientsView() {
 	const loadClients = async () => {
 		const result = await axios.get(
 			"http://localhost:9192/clients",
+			
 			{
 				validateStatus: () => {
 					return true;
@@ -32,9 +33,15 @@ function ClientsView() {
 		);
 		if (result.status === 302) {
 			setClients(result.data);
+			
 		}
 	};
-
+	try {
+		const response = await axios.get('http://example.com/api/clients');
+		// Verarbeite die Antwort hier
+	  } catch (error) {
+		console.error('Fehler beim Laden der Clients:', error);
+	  }
 	const handleDelete = async (id) => {
 		await axios.delete(
 			`http://localhost:9192/clients/delete/${id}`
