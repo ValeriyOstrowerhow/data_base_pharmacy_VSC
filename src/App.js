@@ -1,11 +1,14 @@
+import React from "react";
+import Main from "./component/Main";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "/node_modules/bootstrap/dist/js/bootstrap.min.js";
-import "./App.css";
+
 import Home from "./Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import ClientsView from "./component/client/ClientsView";
 import NavBar from "./component/common/NavBar";
+
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -15,14 +18,17 @@ import AddClient from "./component/client/AddClient";
 import EditClient from "./component/client/EditClient";
 import ClientProfile from "./component/client/ClientProfile";
 
-
 function App() {
 	return (
-		<main className="container mt-5">
-			<Router>
-				<NavBar />
+	
+			<main className="container mt-5">
+		
+			<Router><Main />
+			
+			<NavBar />
+			
 				<Routes>
-					<Route
+					<Route 
 						exact
 						path="/"
 						element={<Home />}></Route>
@@ -42,8 +48,10 @@ function App() {
 						exact
 						path="/client-profile/:id"
 						element={<ClientProfile />}></Route>
+						
 				</Routes>
 			</Router>
+			
 		</main>
 	);
 }

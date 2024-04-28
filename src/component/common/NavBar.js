@@ -6,7 +6,7 @@ const NavBar = () => {
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
 			<div className="container-fluid">
 				<Link className="navbar-brand" to={"https://vita-apotheke-hh.de/"}>
-					Our Pharmacy
+					Home
 				</Link>
 				<button
 					className="navbar-toggler"
@@ -24,7 +24,7 @@ const NavBar = () => {
 					<ul className="navbar-nav">
 						<li className="nav-item">
 							<Link
-								className="nav-link active"
+								className="nav-link"
 								aria-current="page"
 								to={"/view-clients"}>
 								View All Client
@@ -41,7 +41,7 @@ const NavBar = () => {
 							<Link
 								className="nav-link"
 								to={"https://vita-apotheke-hh.de/"}>
-								EXIT
+								Login
 									
 				</Link>
 														
